@@ -1,0 +1,7 @@
+<div class="postContianer">
+    <div class="postContianer__title"><h1>{{post.title}}</h1></div>
+    <div class="postContianer__body">{{post.body}}</div>
+
+    <a [routerLink] = "['/edit',post.id]"> <i class="fas fa-edit " ></i></a>
+    <a (click)="deletePost()"><i class="fas fa-trash-alt "></i></a>
+</div>
