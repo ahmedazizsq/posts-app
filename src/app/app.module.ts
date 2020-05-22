@@ -6,8 +6,8 @@ import { Routes, RouterModule } from '@angular/router';
 import { PostComponent } from './shared/post/post.component';
 import { HomeComponent } from './pages/home/home.component';
 import { postService } from './services/post.service';
-import { HttpClientModule }    from '@angular/common/http';
-import {FormsModule} from '@angular/forms'
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 const appRoutes: Routes = [
   { path: 'edit/:id', component: EditPostComponent },
   { path: 'home', component: HomeComponent },
@@ -16,7 +16,12 @@ const appRoutes: Routes = [
 
 @NgModule({
   declarations: [AppComponent, EditPostComponent, PostComponent, HomeComponent],
-  imports: [BrowserModule, RouterModule.forRoot(appRoutes),HttpClientModule,FormsModule],
+  imports: [
+    BrowserModule,
+    RouterModule.forRoot(appRoutes),
+    HttpClientModule,
+    FormsModule,
+  ],
   providers: [postService],
   bootstrap: [AppComponent],
 })

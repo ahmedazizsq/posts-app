@@ -38,7 +38,7 @@ export class EditPostComponent implements OnInit {
     const userId = this.post.userId
     const post:Post ={title,body,userId,id}
     console.log(post);
-    this.postService.editPost(this.id,post).subscribe((response)=>{
+    this.postService.editPost(id,post).subscribe((response)=>{
       if(response){
         this.router.navigate(['/'])
       }
